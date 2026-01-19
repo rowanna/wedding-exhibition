@@ -4,6 +4,7 @@
     
     <div v-if="!isActive" class="countdown">
       <p class="countdown-text">전시회 오픈까지 남은 시간</p>
+      <p class="countdown-text-small">2월 10일부터 1달간 전시 됩니다.</p>
       <div class="time-container">
         <div class="time-block">
           <span class="time-value">{{ days }}</span>
@@ -40,7 +41,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue';
 // const targetDate = new Date();
 // targetDate.setDate(targetDate.getDate() + ((1 + 7 - targetDate.getDay()) % 7 || 7)); // Next Monday
 
-const targetDate = new Date(2026, 1, 1); 
+const targetDate = new Date(2026, 1, 10); 
 targetDate.setHours(0, 0, 0, 0); // Set to midnight
 
 const now = ref(new Date());
@@ -125,6 +126,10 @@ const goToExhibition = () => {
   font-size: 1.2rem;
   color: #666;
   margin-bottom: 1.5rem;
+}
+.countdown-text-small {
+  font-size: 1.0rem;
+  margin-bottom: 1.5rem
 }
 
 .time-container {
