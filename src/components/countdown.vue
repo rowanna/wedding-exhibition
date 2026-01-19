@@ -36,8 +36,11 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 
-const targetDate = new Date();
-targetDate.setDate(targetDate.getDate() + ((1 + 7 - targetDate.getDay()) % 7 || 7)); // Next Monday
+
+// const targetDate = new Date();
+// targetDate.setDate(targetDate.getDate() + ((1 + 7 - targetDate.getDay()) % 7 || 7)); // Next Monday
+
+const targetDate = new Date(2026, 1, 1); 
 targetDate.setHours(0, 0, 0, 0); // Set to midnight
 
 const now = ref(new Date());
