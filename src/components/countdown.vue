@@ -86,6 +86,7 @@ const goToExhibition = () => {
   }
   // TODO: Add your exhibition URL here
   alert('전시회 페이지로 이동합니다.');
+window.open("https://withspace.com/exhibitionDetail.do?menuNum=2000&idx=3802", "_blank");
   // window.location.href = 'YOUR_EXHIBITION_URL';
 };
 </script>
